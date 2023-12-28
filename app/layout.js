@@ -7,7 +7,18 @@ export const metadata = {
   title: "Canada Technics",
   description: "All you technical and digital needs in one place!",
   icons: {
-    icon: "/assets/logo-1.svg",
+    icon: [
+      {
+        media: "(prefers-color-scheme: light)",
+        url: "/assets/logo-1.svg",
+        href: "/assets/logo-1.svg",
+      },
+      {
+        media: "(prefers-color-scheme: dark)",
+        url: "/assets/logo-2.svg",
+        href: "/assets/logo-2.svg",
+      },
+    ],
     apple: "/assets/logo-1.svg",
   },
 };
