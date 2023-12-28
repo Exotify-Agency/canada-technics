@@ -1,0 +1,54 @@
+:root {
+  // Colors
+  --c-primary-d: #0f054c;
+  --c-primary-d-rgb: 14, 5, 77;
+  --c-primary: #261880;
+  --c-primary-rgb: 38, 24, 129;
+  --c-primary-l: #5761d7;
+  --c-primary-l-rgb: 86, 96, 215;
+
+  --c-white: #fff;
+
+  // Backgrounds
+  --bg-primary: rgb(239, 239, 239);
+  --bg-secondary: var(--c-white);
+  --bg-gradient: linear-gradient(
+    to bottom left,
+    rgba(var(--c-primary-l-rgb), 1),
+    rgba(var(--c-primary-rgb), 1)
+  );
+
+  // padding
+  --pd-xs: 1rem;
+  --pd-sm: 1.5rem;
+  --pd-md: 3rem;
+  --pd-lg: 4.5rem;
+  --pd-xl: 6rem;
+  --pd-xxl: 7.5rem;
+
+  --pd-section-top: 5rem;
+  --pd-section-left: 5rem;
+
+  // Text colors
+  --txt-d: black;
+  --txt-d-rgb: 0, 0, 0;
+  --txt-l: white;
+  --txt-l-rgb: 255, 255, 255;
+
+  --font-size: 1.4rem;
+
+  @include respond(300) {
+    --font-size: 1.2rem;
+  }
+
+  // Font families
+  // --font-roboto: "Roboto", sans-serif; // Done through nextjs
+  // --font-playfair: "Playfair Display", serif; // Done through nextjs
+
+  // Other
+  --border-radius: 1.5rem;
+  --border-radius-icon: 0.75rem;
+  --border-color: rgb(202, 202, 202);
+
+  --width-icon: 5rem;
+}

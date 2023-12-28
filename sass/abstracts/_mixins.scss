@@ -1,0 +1,12 @@
+@mixin limitWidth($limit: 110rem) {
+  max-width: $limit;
+  width: 100%;
+  margin: 0 auto;
+}
+
+// MEDIA QUERY MANAGER
+@mixin respond($breakpoint) {
+  @media only screen and (max-width: calc(#{$breakpoint}em / 16)) {
+    @content;
+  }
+}

@@ -1,0 +1,72 @@
+@import "@/sass/abstracts/mixins";
+
+.Footer {
+  background-color: var(--bg-secondary);
+  padding: var(--pd-section-top) var(--pd-section-left);
+
+  &Container {
+    @include limitWidth();
+
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: repeat(2, auto);
+    gap: var(--pd-lg);
+
+    & > * {
+      grid-row: 1 / span 1;
+    }
+  }
+
+  &Logo {
+    position: relative;
+    height: 10rem;
+    width: 10rem;
+    aspect-ratio: 1;
+  }
+
+  &Menu {
+    display: grid;
+    grid-auto-columns: auto;
+    gap: inherit;
+    justify-content: center;
+
+    list-style: none;
+
+    &Title,
+    &Item {
+      grid-row: 1 / span 1;
+    }
+
+    @at-root h2#{&}Title {
+      font-size: 1.4rem;
+      color: var(--c-primary-l);
+      text-transform: uppercase;
+    }
+  }
+
+  &List {
+    display: grid;
+    gap: 0.5rem var(--pd-md);
+
+    list-style: none;
+
+    &Features {
+      grid-template-rows: repeat(5 + 1, auto);
+      grid-template-columns: repeat(2, auto);
+    }
+  }
+
+  &ListItem {
+    display: block;
+
+    &:first-child {
+      grid-column: 1 / -1;
+    }
+  }
+
+  &Attributions {
+    grid-row: 2 / span 1;
+    grid-column: 1 / -1;
+    justify-self: center;
+  }
+}

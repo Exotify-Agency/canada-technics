@@ -1,0 +1,234 @@
+@import "@/sass/abstracts/mixins";
+
+.LayoutSection {
+  &Container {
+    @include limitWidth();
+
+    display: grid;
+    gap: var(--pd-lg);
+  }
+}
+
+.Double {
+  grid-template-columns: repeat(2, 1fr);
+
+  // Reversed variant
+  &.reversed &Column:nth-child(1) {
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 1;
+  }
+  &.reversed &Column:nth-child(2) {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+  }
+
+  &Column {
+    display: grid;
+    gap: var(--pd-md);
+
+    &:nth-child(1) {
+      align-self: center;
+    }
+
+    &:nth-child(2) {
+      align-self: start;
+    }
+  }
+
+  &Image {
+    display: grid;
+    position: relative;
+    max-width: 45rem;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+
+    align-self: center;
+    justify-self: center;
+  }
+}
+
+.Triple {
+  justify-items: center;
+
+  & .Titlebar {
+    text-align: center;
+  }
+
+  & .Cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(auto, 25rem));
+    gap: inherit;
+    justify-content: center;
+  }
+}
+
+.Grid {
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+
+  // Reversed variant
+  &.reversed &Column:nth-child(1) {
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 1;
+  }
+  &.reversed &Column:nth-child(2) {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+  }
+
+  & .Cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: inherit;
+
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1;
+  }
+
+  &Image {
+    position: relative;
+    max-width: 45rem;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+
+    align-self: center;
+    justify-self: center;
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 1;
+  }
+}
+
+.Gallery {
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: var(--pd-md);
+
+  & .Box {
+    background: var(--bg-secondary);
+    border-radius: var(--border-radius);
+    width: min-content;
+    padding: var(--pd-md);
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+
+    display: grid;
+    gap: var(--pd-sm);
+
+    &Title {
+      font-size: 2rem;
+      font-weight: 900;
+    }
+
+    // Largest Cell
+    &Large {
+      grid-column: 1 / span 2;
+      grid-row: 1 / span 2;
+      align-content: start;
+
+      aspect-ratio: 1;
+      grid-template-rows: auto 1fr auto;
+
+      & .Image {
+        width: 60%;
+        height: auto;
+        aspect-ratio: 1;
+        position: absolute;
+        right: -10%;
+        bottom: -15%;
+
+        &Container {
+          position: relative;
+          height: 100%;
+          width: 100%;
+        }
+      }
+    }
+
+    // Middle Cell
+    &Medium {
+      grid-column: 3 / span 1;
+      grid-row: 1 / span 2;
+
+      align-content: end;
+
+      & .Image {
+        width: 120%;
+        height: auto;
+        aspect-ratio: 1;
+        position: absolute;
+        top: 5%;
+        right: -30%;
+
+        &Container {
+          position: relative;
+          height: 100%;
+          width: 100%;
+        }
+      }
+    }
+
+    // Smallest Cells
+    &Small {
+      grid-column: 4 / span 1;
+      align-content: start;
+      aspect-ratio: 1;
+
+      & .Image {
+        width: 100%;
+        aspect-ratio: 1;
+        position: relative;
+
+        &Container {
+          height: 100%;
+        }
+      }
+    }
+  }
+}
+
+.Card {
+  border-radius: var(--border-radius);
+  padding: var(--pd-md);
+
+  display: grid;
+  gap: var(--pd-md);
+  align-content: start;
+
+  &.filled {
+    background: var(--bg-secondary);
+  }
+
+  &Icon {
+    padding: var(--pd-sm);
+    width: var(--width-icon);
+    height: var(--width-icon);
+    border-radius: var(--border-radius-icon);
+    background: var(--bg-gradient);
+    overflow: hidden;
+
+    justify-self: center;
+    color: var(--txt-l);
+
+    & > svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &Content {
+    text-align: center;
+
+    display: grid;
+    gap: var(--pd-sm);
+  }
+}
+
+.Titlebar {
+  display: grid;
+  max-width: 60rem;
+}

@@ -1,0 +1,141 @@
+.Button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: max-content;
+
+  position: relative;
+  padding: 1.25rem 2.5rem;
+  font-size: var(--font-size);
+  text-transform: capitalize;
+  border: 0;
+  background: var(--bg-gradient);
+  color: var(--c-white);
+  border-radius: 100rem;
+
+  transition: filter 0.2s ease;
+
+  cursor: pointer;
+
+  // Icon
+  & svg {
+    height: 2rem;
+    width: 2rem;
+  }
+
+  &:hover,
+  &:focus-within {
+    filter: brightness(1.3);
+  }
+
+  &:disabled {
+    pointer-events: none;
+  }
+
+  &Light,
+  &Light:link,
+  &Light:visited {
+    background: var(--c-white);
+    color: var(--c-primary);
+
+    &:hover,
+    &:focus-within {
+      filter: brightness(0.93);
+    }
+  }
+
+  &Nav,
+  &Nav:link,
+  &Nav:visited {
+    padding: 0;
+    background: transparent;
+    color: rgba(var(--txt-l-rgb), 0.5);
+    font-weight: 700;
+
+    transition: color 0.2s ease;
+
+    &:hover,
+    &:focus-within {
+      filter: none;
+      color: var(--txt-l);
+    }
+
+    &.active {
+      color: var(--c-primary-l);
+
+      &:hover,
+      &:focus-within {
+        filter: none;
+        color: var(--c-primary);
+      }
+    }
+  }
+
+  &Link,
+  &Link:link,
+  &Link:visited {
+    padding: 0;
+    display: inline-block;
+    color: var(--c-primary-l);
+    background: transparent;
+    font-weight: 600;
+    text-transform: none;
+
+    transition: color 0.2s ease;
+
+    &:hover,
+    &:focus-within {
+      color: var(--c-primary);
+    }
+  }
+
+  &Text,
+  &Text:link,
+  &Text:visited {
+    color: unset;
+    padding: 0;
+    display: inline-block;
+    background: transparent;
+    text-transform: none;
+    color: var(--txt-d);
+
+    transition: color 0.2s ease;
+
+    &:hover,
+    &:focus-within {
+      color: var(--c-primary-l);
+    }
+  }
+
+  &Circle,
+  &Circle:link,
+  &Circle:visited,
+  &CircleLight,
+  &CircleLight:link,
+  &CircleLight:visited {
+    padding: 1.303rem;
+    aspect-ratio: 1;
+
+    &Light {
+    }
+  }
+
+  &Circle,
+  &Circle:link,
+  &Circle:visited {
+    background: var(--bg-gradient);
+  }
+
+  &CircleLight,
+  &CircleLight:link,
+  &CircleLight:visited {
+    background: var(--bg-secondary);
+    color: var(--c-primary-l);
+
+    &:hover,
+    &:focus-within {
+      filter: brightness(0.93);
+    }
+  }
+}

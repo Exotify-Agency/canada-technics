@@ -1,0 +1,61 @@
+body,
+input,
+label,
+button,
+textarea,
+select {
+  line-height: 1.5;
+  font-size: 1.5rem;
+}
+
+.header {
+  line-height: 1.2;
+  text-transform: capitalize;
+}
+
+.header-page {
+  font-size: 7rem;
+  font-weight: 900;
+
+  color: var(--c-white);
+}
+
+.header-section {
+  font-size: 3rem;
+  font-weight: 900;
+
+  color: var(--txt-xxd);
+
+  @include respond(800) {
+    font-size: 4rem;
+  }
+
+  @include respond(600) {
+    font-size: 3rem;
+  }
+}
+
+.subtitle {
+  font-size: 1.3rem;
+  font-weight: 600;
+
+  line-height: 1;
+  text-transform: uppercase;
+  color: var(--c-primary-l);
+}
+
+.caption {
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  font-family: var(--font-playfair);
+}
+
+.paragraph,
+.ul,
+.li {
+  font-size: var(--font-size);
+}
+
+.paragraph {
+  font-family: var(--font-roboto);
+}

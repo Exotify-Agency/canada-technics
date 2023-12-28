@@ -1,0 +1,102 @@
+.ContactSection {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  height: 100vh;
+
+  &Column {
+    display: grid;
+    gap: inherit;
+  }
+}
+
+.Header {
+  background: var(--bg-gradient);
+  padding: var(--pd-md);
+  border-radius: var(--border-radius);
+  position: relative;
+  overflow: hidden;
+
+  &Tint {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(var(--c-primary-rgb), 0.5) 10%,
+      rgba(var(--c-primary-rgb), 0.2) 25%,
+      rgba(var(--c-primary-rgb), 0.2) 100%
+    );
+  }
+
+  &Titlebar {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: var(--pd-md);
+    align-items: center;
+
+    color: var(--txt-l);
+    position: relative;
+  }
+}
+
+.Contacts {
+  display: grid;
+  justify-content: start;
+  width: 35rem;
+
+  &List {
+    list-style: none;
+
+    display: grid;
+    align-content: center;
+    gap: inherit;
+  }
+
+  &ListItem {
+    position: relative;
+  }
+}
+
+.Contact {
+  border-radius: var(--border-radius);
+  padding: var(--pd-md);
+
+  display: grid;
+  gap: var(--pd-sm);
+  grid-template-columns: auto 1fr;
+
+  &Icon {
+    height: 5rem;
+    width: 5rem;
+    background: var(--bg-gradient);
+    border-radius: var(--border-radius-icon);
+    padding: 1.5rem;
+
+    & svg {
+      color: var(--txt-l);
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &Content {
+    display: grid;
+    gap: 0.5rem;
+    grid-template-rows: repeat(3, auto);
+  }
+
+  & > *:global(.paragraph) {
+    color: var(--txt-d);
+  }
+}
+
+.Titlebar {
+  position: relative;
+
+  & > *:global(.header) {
+    color: var(--txt-d);
+  }
+}

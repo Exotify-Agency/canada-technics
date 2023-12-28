@@ -1,0 +1,26 @@
+@import "@/sass/abstracts/mixins";
+
+section.ContactSection {
+}
+
+.Contact {
+  @include limitWidth();
+
+  padding: var(--pd-lg);
+  background-image: linear-gradient(
+    to top right,
+    rgba(var(--c-primary-rgb), 1),
+    rgba(var(--c-primary-l-rgb), 1)
+  );
+
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: var(--pd-sm);
+  border-radius: var(--border-radius);
+  // height: 40rem;
+
+  & > *:global(.header) {
+    color: var(--txt-l);
+  }
+}

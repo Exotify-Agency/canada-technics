@@ -1,0 +1,14 @@
+@import "@/sass/abstracts/mixins";
+
+.Section {
+  padding: var(--pd-section-top) var(--pd-section-left);
+  position: relative;
+
+  display: grid;
+  gap: var(--pd-md);
+
+  @include respond(700) {
+    flex-direction: column;
+    padding: var(--pd-xl) var(--pd-md);
+  }
+}

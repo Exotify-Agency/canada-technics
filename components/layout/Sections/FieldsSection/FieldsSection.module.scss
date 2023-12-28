@@ -1,0 +1,44 @@
+@import "@/sass/abstracts/mixins";
+
+section.FieldsSection {
+}
+
+.Fields {
+  @include limitWidth();
+
+  display: grid;
+  gap: var(--pd-md);
+
+  &Row {
+    display: grid;
+    grid-auto-columns: 25rem;
+    gap: inherit;
+    justify-content: center;
+  }
+}
+
+.FieldCard {
+  background-color: var(--bg-secondary);
+  padding: var(--pd-md);
+  border-radius: var(--bd-radius);
+
+  grid-row: 1 / 2;
+
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  gap: var(--pd-md);
+  justify-items: center;
+
+  &Image {
+    height: 15rem;
+    width: auto;
+    aspect-ratio: 1;
+    position: relative;
+  }
+
+  &Link,
+  &Link:link,
+  &Link:visited {
+    width: 100%;
+  }
+}

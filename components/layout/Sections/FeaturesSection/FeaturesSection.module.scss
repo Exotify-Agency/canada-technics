@@ -1,0 +1,91 @@
+@import "@/sass/abstracts/mixins";
+
+.FeaturesSection {
+  &Container {
+    @include limitWidth();
+
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-columns: 1fr 2fr;
+    gap: var(--pd-lg);
+
+    & > *:global(.header) {
+      grid-column: 1 / -1;
+    }
+  }
+
+  &Column {
+    display: grid;
+    align-items: start;
+  }
+}
+
+.Titlebar {
+  display: grid;
+  gap: 0;
+}
+
+.Features {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--pd-md);
+}
+
+.Feature {
+  position: relative;
+
+  &Container {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: start;
+    gap: var(--pd-sm);
+    padding: var(--pd-sm);
+    border-radius: 1rem;
+    border: 0.1rem solid transparent;
+
+    transition: border 0.2s ease;
+
+    &:hover,
+    &:focus {
+      border: 0.1rem solid var(--c-primary-l);
+    }
+
+    &:hover svg,
+    &:focus-within svg {
+      scale: 1.15;
+    }
+  }
+
+  &Icon {
+    height: 5rem;
+    width: 5rem;
+    background-image: linear-gradient(
+      to top right,
+      rgba(var(--c-primary-rgb), 1),
+      rgba(var(--c-primary-l-rgb), 1)
+    );
+    border-radius: var(--border-radius-icon);
+
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    padding: var(--pd-sm);
+
+    & > svg {
+      width: 100%;
+      height: 100%;
+      color: var(--bg-secondary);
+
+      transition: scale 0.2s ease;
+    }
+  }
+
+  &Content {
+    display: grid;
+    gap: var(--pd-xs);
+  }
+
+  &Name {
+    line-height: 1;
+  }
+}

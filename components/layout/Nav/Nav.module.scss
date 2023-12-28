@@ -1,0 +1,76 @@
+@import "@/sass/abstracts/mixins";
+
+.Nav {
+  $duration: 0.4s;
+
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  z-index: 10;
+  background: transparent;
+  border-bottom: 0.2rem solid transparent;
+
+  &.active {
+    border-color: var(--bg-primary);
+    background: var(--bg-secondary);
+    position: fixed;
+
+    transition: position $duration ease;
+    animation: reveal $duration ease;
+  }
+
+  &.active &Logo {
+    opacity: 1;
+  }
+
+  &Container {
+    @include limitWidth();
+    padding: 1rem var(--pd-sm);
+
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: var(--pd-md);
+  }
+
+  &Logo {
+    position: relative;
+    height: 5rem;
+    width: 5rem;
+    aspect-ratio: 1;
+    opacity: 0.5;
+  }
+
+  &List {
+    list-style: none;
+
+    display: grid;
+    grid-template-rows: auto;
+    gap: inherit;
+    justify-content: center;
+    align-content: center;
+  }
+
+  &ListItem {
+    grid-row: 1 / span 1;
+  }
+}
+
+@keyframes reveal {
+  from {
+    translate: 0 -100%;
+  }
+
+  to {
+    translate: 0 0;
+  }
+}
+
+@keyframes hide {
+  from {
+    translate: 0 0;
+  }
+
+  to {
+    translate: 0 -100%;
+  }
+}

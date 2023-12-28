@@ -1,0 +1,148 @@
+Imagine you are a copywriter tasked with providing text content for a website. The website is a computer technology website that provides many services related to computers. The website has individual pages for the features that they provide. Each feature's page needs content, which is made up of different types of sections. The text on these sections are taken from a javascript object related to the feature and description on that page. 
+
+Here is the object for one feature as an example:
+```
+{
+	name: "Web Hosting",
+	description: "Reliable and scalable hosting solutions for your online presence.",
+	icon: <Router />,
+	slug: "web-hosting",
+	sections: [],
+}
+```
+
+In that sections array, generate the data for 3-4 sections. Each section is an object that looks like the following: 
+```
+{
+	type: "[section type]",
+	content: {},
+}
+```
+
+The type property must be one of either double, triple, grid or gallery. The content property depends on the type, and is an object of the copywriting data. The section types should be ordered randomly, not in the order mentioned before. The content for each section type is shown below, use this template and add it to the content property:
+
+For the section that is double type:
+```
+{
+	subtitle: "[current section's topic, maximum 2 words]”,
+	title: "[expressive title based on subtitle, minimum 4 words, maximum 9 words]”,
+	paragraphs: [
+		"[paragraph describing title, minimum 60 words, maximum 80]”
+	],
+	image: {
+		src: “/assets/database/database-1.svg”,
+		alt: “ALT TEXT HERE”,
+	},
+};
+```
+
+For the section that is triple type:
+```
+{
+	subtitle: "[current section's topic, maximum 2 words]”,
+	title: "[expressive title based on subtitle, minimum 4 words, maximum 9 words]”,
+        cards: [
+		{
+			title: “[title of this box and is a subtopic of this section’s topic, maximum 4 words]”,
+			summary: "[short summary of this box, minimum 10 words, maximum 18]”,
+			icon: <Shield />,
+          	},
+		{
+			title: “[title of this box and is a subtopic of this section’s topic, maximum 4 words]”,
+			summary: "[short summary of this box, minimum 10 words, maximum 18]”,
+			icon: <Shield />,
+          	},
+		{
+			title: “[title of this box and is a subtopic of this section’s topic, maximum 4 words]”,
+			summary: "[short summary of this box, minimum 10 words, maximum 18]”,
+			icon: <Shield />,
+          	},
+	],
+};
+```
+
+For the section that is grid type::
+```
+{
+	subtitle: "[current section's topic, maximum 2 words]”,
+	title: "[expressive title based on subtitle, minimum 4 words, maximum 9 words]”,
+	image: {
+		src: “/assets/database/database-1.svg”,
+		alt: “ALT TEXT HERE”,
+	},
+	cards: [
+		{
+			title: “[title of this box and is a subtopic of this section’s topic, maximum 4 words]”,
+			summary: "[short summary of this box, minimum 10 words, maximum 18]”,
+			icon: <Shield />,
+		},
+		{
+			title: “[title of this box and is a subtopic of this section’s topic, maximum 4 words]”,
+			summary: "[short summary of this box, minimum 10 words, maximum 18]”,
+			icon: <Shield />,
+		},
+		{
+			title: “[title of this box and is a subtopic of this section’s topic, maximum 4 words]”,
+			summary: "[short summary of this box, minimum 10 words, maximum 18]”,
+			icon: <Shield />,
+		},
+		{
+			title: “[title of this box and is a subtopic of this section’s topic, maximum 4 words]”,
+			summary: "[short summary of this box, minimum 10 words, maximum 18]”,
+			icon: <Shield />,
+		},
+	],
+ }
+```
+
+For the section that is gallery type:
+```
+{
+	title: "[expressive title for section]",
+	subtitle: "[section topic]",
+	boxes: [
+			{
+				paragraph: "[paragraph describing title, minimum 60 words, maximum 80]",
+				image: {
+					src: “/assets/database/database-1.svg”,
+					alt: “ALT TEXT HERE”,
+				},
+				button: {
+					text: "[text inside a call to action button]",
+					href: "/",
+				},
+			},
+			{
+				title: “[title of this box and is a subtopic of this section’s topic, maximum 4 words]”,
+				summary: "[short summary of this box, minimum 10 words, maximum 18]”,
+				image: {
+					src: “/assets/database/database-1.svg”,
+					alt: “ALT TEXT HERE”,
+				},
+          		},
+			{
+				title: “[title of this box and is a subtopic of this section’s topic, maximum 4 words]”,
+				summary: "[short summary of this box, minimum 10 words, maximum 18]”,
+			},
+          		{
+				image: {
+					src: “/assets/database/database-1.svg”,
+					alt: “ALT TEXT HERE”,
+				},
+          		},
+	],
+}
+```
+
+Do not edit any data that does not have a square bracket in it, for example, parts of the object labelled as src and alt in images, or icons. Anything labelled as paragraph must have a word count more than 60, and less than 80, and anything labelled as summary should have a word count more than 10 words and less than 18 words. This is very important. Also, follow the word limits and other constraints in the square bracket if there are any.
+
+Do what I just said for this object:
+```
+{
+	name: "Web Hosting",
+	description: "Reliable and scalable hosting solutions for your online presence.",
+	icon: <Router />,
+	slug: "web-hosting",
+	sections: [],
+},
+```
