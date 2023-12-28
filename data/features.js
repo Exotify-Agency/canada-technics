@@ -292,8 +292,8 @@ const features = [
                 alt: "automated server",
               },
               button: {
-                text: "Get Started Now",
-                href: "/",
+                text: "Contact Us",
+                href: "/contact",
               },
             },
             {
@@ -896,8 +896,8 @@ const features = [
                 alt: "Virtualization Technologies",
               },
               button: {
-                text: "Get Started",
-                href: "/",
+                text: "Contact Us",
+                href: "/contact",
               },
             },
             {
@@ -1039,8 +1039,8 @@ const features = [
                 alt: "Database Facilities ",
               },
               button: {
-                text: "Get Started",
-                href: "/",
+                text: "Contact us",
+                href: "/contact",
               },
             },
             {
@@ -1196,8 +1196,8 @@ const features = [
                 alt: "AI Solutions",
               },
               button: {
-                text: "Get Started",
-                href: "/",
+                text: "Contact us",
+                href: "/contact",
               },
             },
             {
