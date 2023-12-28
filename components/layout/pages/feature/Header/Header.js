@@ -10,6 +10,8 @@ const Header = ({ feature }) => {
         src={`/assets/pages/features/headers/${feature.slug}.jpg`}
         alt={`Image of ${feature.name}`}
         style={{ objectFit: "cover" }}
+        loading="eager"
+        priority
         fill
       />
       <span className={classes.HeaderTint} />
