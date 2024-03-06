@@ -7,7 +7,7 @@ const contacts = [
     title: "Send us a letter",
     text: "Response within 2-3 business days.",
     icon: <Mail />,
-    value: "support@canadatechnics.ca",
+    value: "CanadaTechnics@gmail.com",
   },
   {
     type: "phone",
@@ -15,7 +15,7 @@ const contacts = [
     title: "Give us a call",
     text: "Available 9:00am to 5:00pm.",
     icon: <Phone />,
-    value: "647-282-5808",
+    value: "647-724-8000",
   },
 ];
 
